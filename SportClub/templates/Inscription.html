@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inscription</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static '/register/fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static '/register/css/style.css'%}">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">S'inscrire</h2>
+                        <form method="post" class="register-form" id="register-form" action="">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="first_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                {{ form.first_name }}
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                {{ form.last_name }}
+                            </div>
+                            <div class="form-group">
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                {{ form.username }}
+                                {% if form.errors.username %}
+                                {% for error in form.errors.username %}
+                                    <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                            {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                {{ form.email }}
+                                {% if form.errors.email %}
+                                {% for error in form.errors.email %}
+                                    <small class="text-danger">{{ error }}</small>
+                                {% endfor %}
+                            {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                {{ form.password }}
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" style="background-color: rgb(240, 210, 15);" value="S'inscrire"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="../static/images/about-img.png" alt="sing up image"></figure>
+                        <a href="{% url 'authentification' %}" class="signup-image-link">Déjà inscrit?</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src=" ../register/vendor/jquery/jquery.min.js"></script>
+    <script src="../register/js/main.js"></script>
+  
+</div>
+</body>
+</html>

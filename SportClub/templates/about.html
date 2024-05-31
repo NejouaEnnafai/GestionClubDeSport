@@ -1,0 +1,397 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>VitalFit</title>
+    
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-color: #f6f5f7;
+font-family: 'Open Sans', sans-serif;
+margin-bottom: 50px;
+}
+
+.text-center {
+text-align: center;
+}
+
+.pricing-box-container {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.pricing-box {
+background-color: #ffffff;
+box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+border-radius: 4px;
+flex: 1;
+padding: 0 30px 30px;
+margin: 2%;
+min-width: 250px;
+max-width: 350px;
+}
+
+.pricing-box h5 {
+text-transform: uppercase;
+}
+
+.price {
+margin: 24px 0;
+font-size: 36px;
+font-weight: 900;
+}
+
+.price sub, .price sup {
+font-size: 16px;
+font-weight: 100;
+}
+
+.features-list {
+padding: 0;
+list-style-type: none;
+}
+
+.features-list li {
+font-weight: 100;
+padding: 12px 0;
+font-weight: 100;
+}
+
+.features-list li:not(:last-of-type) {
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+border-radius: 25px;
+border: none;
+background-color: #EC1362;
+color: #ffffff;
+cursor: pointer;
+padding: 10px 15px;
+margin-top: 20px;
+text-transform: uppercase;
+transition: all 0.1s ease-in-out;
+}
+
+.btn-primary:hover {
+box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.5);
+transform: translateY(-3px);
+}
+
+.pricing-box-bg-image {
+background-image: url('https://images.unsplash.com/photo-1550029402-226115b7c579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80');
+background-size: cover;
+background-position: center center;
+color: #ffffff;
+}
+
+.pricing-box-bg-image .features-list li {
+border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.pricing-box-bg-image .btn-primary {
+background-color: #ffffff;
+color: #000;
+}
+
+footer {
+background-color: #222;
+color: #fff;
+font-size: 14px;
+bottom: 0;
+position: fixed;
+left: 0;
+right: 0;
+text-align: center;
+}
+
+
+footer p {
+margin: 10px 0;
+}
+
+footer i {
+color: red;
+}
+
+footer a {
+color: #3C97BF;
+text-decoration: none;
+}
+</style>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sub_page about_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="../static/images/logo.png" alt="" />
+            <span>
+              VitalFit
+            </span>
+          </a>
+          <div class="contact_nav" id="">
+            <ul class="navbar-nav ">
+              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}">
+                  <img src="../static/images/call.png" alt="" />
+                  <span>Tél :  +212653423523</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'service' %}">
+                  <img src="../static/images/envelope.png" alt="" />
+                  <span>VitalFit@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </header>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div class="custom_nav2">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex  flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'index' %}">Accueil <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}"> Evénements  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'service' %}">Activités </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Réservation </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'authentification' %}">Se déconnecter</a>
+                  </li>
+                </ul>
+              
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Les événements
+        </h2>
+      </div>
+  
+    
+   
+	
+      <div class="pricing-box-container">
+        {% for evenement in evenements %}
+            <div class="pricing-box text-center " style="background-image: url('{{ evenement.affiche.url }}'); background-repeat: no-repeat; background-size: cover;opacity:10px;">
+              <div class="pricing-box text-center " style=" background: rgba(234, 229, 229, 0.8);
+              backdrop-filter: saturate(180%) blur(5px);" >
+              <h5>{{ evenement.nom }}</h5>
+                <ul class="features-list">
+                    <li><strong>{{ evenement.description }}  </strong> </li> 
+                    <li><strong>{{ evenement.date }}</strong></li>
+                    <li><strong>{{ evenement.heure }}</strong> </li>
+                    <li><strong>{{ evenement.lieu }}</strong></li>
+                </ul>
+                <button type="submit" class="btn-primary" style="background-color: rgb(240, 210, 15);"><a href="{% url 'inscriEvent'%}" style="color: white;">S'inscrire</a></button>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!--  
+
+
+
+
+     -->
+	
+   
+
+
+
+
+
+    
+  </div>
+        
+
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2-top">
+    
+    <div class="container">
+      <div class="row">
+       
+        
+        <div class="col-md-2 offset-md-1">
+          <h6>
+            Menus
+          </h6>
+          <ul>
+            <li class=" active">
+              <a class="" href="{% url 'index' %}">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="">
+              <a class="" href="{% url 'about' %}">Evénements </a>
+            </li>
+            <li class="">
+              <a class="" href="{% url 'service' %}">Activités </a>
+            </li>
+            <li class="">
+              <a class="" href="{% url 'contact' %}">Réservation </a>
+            </li>
+            <li class="">
+              <a class="" href="#contactSection">Contactez-nous</a>
+            </li>
+            <li class="">
+              <a class="" href="{% url 'authentification' %}">Se déconnecter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+         
+          </h6>
+          <ul>
+            <li>
+              <a href="">
+               
+              </a>
+            </li>
+            <li>
+              <a href="">
+             
+              </a>
+            </li>
+            <li>
+              <a href="">
+              
+              </a>
+            </li>
+            <li>
+              <a href="">
+               
+              </a>
+            </li>
+            <li>
+              <a href="">
+                
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>
+            Contact Us
+          </h6>
+          <div class="info_link-box">
+            <a href="">
+              <img src="../static/images/location-white.png" alt="">
+              <span> Club VitalFit ,12 Rue des Palmiers, Quartier des Fleurs, Casablanca, Maroc</span>
+            </a>
+            <a href="">
+              <img src="../static/images/call-white.png" alt="">
+              <span> +212653423523</span>
+            </a>
+            <a href="">
+              <img src="../static/images/mail-white.png" alt="">
+              <span> VitalFit@gmail.com</span>
+            </a>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+
+
+  <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>
